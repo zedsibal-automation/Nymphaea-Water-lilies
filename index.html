@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nymphaea Waterlilies — Premium Water Lilies & Pond Plants</title>
+<meta name="description" content="Boutique water lily and pond plant nursery in Lawy, Capas, Tarlac. Hardy day-blooming varieties, hand-grown with care." />
+<meta property="og:title" content="Nymphaea Waterlilies — Premium Water Lilies & Pond Plants" />
+<meta property="og:description" content="Boutique water lily and pond plant nursery in Lawy, Capas, Tarlac." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          background: 'oklch(0.18 0.03 155)',
+          foreground: 'oklch(0.97 0.01 90)',
+          card: 'oklch(0.22 0.035 155)',
+          border: 'oklch(0.32 0.04 155 / 0.5)',
+          muted: { DEFAULT: 'oklch(0.25 0.03 155)', foreground: 'oklch(0.75 0.02 100)' },
+          pond: { DEFAULT: 'oklch(0.22 0.045 155)', deep: 'oklch(0.13 0.03 155)' },
+          gold: { DEFAULT: 'oklch(0.82 0.16 88)', soft: 'oklch(0.9 0.13 92)' },
+          crimson: 'oklch(0.55 0.24 20)',
+        },
+        fontFamily: {
+          display: ['"Cormorant Garamond"','serif'],
+          sans: ['Inter','ui-sans-serif','system-ui','sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  :root {
+    --gold: oklch(0.82 0.16 88);
+    --gold-soft: oklch(0.9 0.13 92);
+    --pond: oklch(0.22 0.045 155);
+    --pond-deep: oklch(0.13 0.03 155);
+    --crimson: oklch(0.55 0.24 20);
+    --gradient-pond: linear-gradient(180deg, var(--pond) 0%, var(--pond-deep) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--gold-soft), var(--gold));
+    --gradient-hero: linear-gradient(180deg, oklch(0.13 0.03 155 / 0.3) 0%, oklch(0.13 0.03 155 / 0.85) 100%);
+    --shadow-glow: 0 20px 60px -20px oklch(0.82 0.16 88 / 0.35);
+    --shadow-bloom: 0 30px 80px -30px oklch(0 0 0 / 0.6);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--gradient-pond);
+    color: oklch(0.97 0.01 90);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3,h4 { font-family: "Cormorant Garamond", serif; letter-spacing: -0.01em; }
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .shadow-bloom { box-shadow: var(--shadow-bloom); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .bg-gradient-hero { background: var(--gradient-hero); }
+
+  [data-reveal] { opacity: 0; transform: translateY(24px); }
+  .fade-up { animation: fadeUp .9s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes fadeUp { from { opacity:0; transform: translateY(24px);} to { opacity:1; transform: translateY(0);} }
+
+  .ripple:hover { box-shadow: 0 0 0 1px var(--accent, var(--gold)), 0 30px 60px -20px oklch(0.82 0.16 88 / 0.5); transition: box-shadow .5s, transform .5s; }
+</style>
+</head>
+<body class="text-foreground">
+
+<!-- NAV -->
+<nav class="fixed top-0 z-40 w-full backdrop-blur-md" style="background: oklch(0.13 0.03 155 / 0.7)">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+    <a href="#top" class="flex items-center gap-2">
+      <img src="images/lotus-logo.png" alt="Nymphaea" class="h-8 w-8" width="40" height="40" />
+      <span class="hidden text-lg font-display font-semibold tracking-[0.3em] text-gradient-gold sm:inline">NYMPHAEA</span>
+    </a>
+    <div class="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
+      <a href="#varieties" class="hover:text-gold transition-colors">Varieties</a>
+      <a href="#about" class="hover:text-gold transition-colors">About</a>
+      <a href="#gallery" class="hover:text-gold transition-colors">Gallery</a>
+      <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+    </div>
+    <a href="#contact" class="rounded-full border border-gold/40 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-gold hover:bg-gold hover:text-pond-deep transition-colors">Inquire</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="relative flex min-h-screen items-center justify-center overflow-hidden">
+  <img src="images/hero-banner.jpg" alt="Assorted water lilies floating on a dark pond" class="absolute inset-0 h-full w-full object-cover" />
+  <div class="absolute inset-0 bg-gradient-hero"></div>
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse at center, transparent 20%, oklch(0.13 0.03 155 / 0.85) 80%)"></div>
+
+  <div class="relative z-10 mx-auto max-w-4xl px-6 pt-24 pb-16 text-center">
+    <div data-reveal class="flex justify-center">
+      <div class="flex flex-col items-center gap-1">
+        <img src="images/lotus-logo.png" alt="" class="h-20 w-20" style="filter: drop-shadow(0 4px 20px oklch(0.82 0.16 88 / 0.4))" />
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-display font-medium tracking-[0.35em] text-gradient-gold">NYMPHAEA</span>
+          <span class="mt-0.5 h-px w-3/4 bg-gradient-to-r from-transparent via-gold to-transparent"></span>
+        </div>
+      </div>
+    </div>
+    <p data-reveal class="mt-8 flex items-center justify-center gap-2 text-xs uppercase tracking-[0.4em]" style="color: oklch(0.9 0.13 92 / 0.8)">
+      <i data-lucide="sparkles" class="h-3 w-3"></i> Boutique Nursery · Est. Tarlac
+    </p>
+    <h1 data-reveal class="mt-6 text-5xl font-display font-medium leading-[1.05] sm:text-6xl md:text-7xl">
+      Premium <span class="italic text-gradient-gold">Water Lilies</span><br />& Pond Plants
+    </h1>
+    <p data-reveal class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+      Hand-grown hardy and tropical varieties from our nursery in Lawy, Capas, Tarlac — cultivated slowly, shipped with care across the Philippines.
+    </p>
+    <div data-reveal class="mt-10 flex flex-wrap items-center justify-center gap-4">
+      <a href="#varieties" class="group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-pond-deep shadow-glow transition-transform hover:scale-105" style="background: var(--gradient-gold)">
+        Shop Varieties <i data-lucide="arrow-right" class="h-4 w-4"></i>
+      </a>
+      <a href="#contact" class="rounded-full border border-gold/50 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors hover:bg-gold/10" style="color: var(--gold-soft)">
+        Get in Touch
+      </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 z-10 w-full border-t border-gold/20 backdrop-blur-md" style="background: oklch(0.1 0.02 155 / 0.75)">
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-3 px-6 py-4 text-sm text-muted-foreground sm:grid-cols-3">
+      <a href="tel:+639615831341" class="flex items-center justify-center gap-2 hover:text-gold transition-colors">
+        <i data-lucide="phone" class="h-4 w-4 text-gold"></i> +63 961 583 1341
+      </a>
+      <a href="mailto:nymphaea.lilies@gmail.com" class="flex items-center justify-center gap-2 hover:text-gold transition-colors">
+        <i data-lucide="mail" class="h-4 w-4 text-gold"></i> nymphaea.lilies@gmail.com
+      </a>
+      <div class="flex items-center justify-center gap-2">
+        <i data-lucide="map-pin" class="h-4 w-4 text-gold"></i> Lawy, Capas, Tarlac
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- VARIETIES -->
+<section id="varieties" class="relative py-28">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mx-auto mb-16 max-w-2xl text-center">
+      <p class="mb-3 flex items-center justify-center gap-2 text-xs uppercase tracking-[0.4em] text-gold">
+        <i data-lucide="leaf" class="h-3 w-3"></i> The Collection
+      </p>
+      <h2 class="text-4xl font-display sm:text-5xl">Varieties in <span class="italic text-gradient-gold">Bloom</span></h2>
+      <p class="mt-4 text-muted-foreground">Every plant is nursery-raised, disease-free, and ready to bloom in your pond.</p>
+    </div>
+
+    <div id="variety-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="relative overflow-hidden py-28" style="background: linear-gradient(135deg, oklch(0.2 0.05 145) 0%, oklch(0.15 0.04 155) 100%)">
+  <div class="absolute inset-0 opacity-20">
+    <img src="images/gallery-1.jpg" alt="" class="h-full w-full object-cover blur-3xl" aria-hidden="true" />
+  </div>
+  <div class="relative mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:items-center">
+    <div data-reveal>
+      <p class="mb-3 text-xs uppercase tracking-[0.4em] text-gold">Our Story</p>
+      <h2 class="text-4xl font-display sm:text-5xl">A quiet pond in <span class="italic text-gradient-gold">Tarlac</span>.</h2>
+      <div class="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+        <p>Nymphaea began as a family passion for pond gardens. From our nursery in Lawy, Capas, Tarlac, we grow, divide, and replant water lilies year-round — nurturing each rhizome until it is strong enough to bloom in your own pond.</p>
+        <p>We focus on hardy day-blooming and tropical varieties selected for the Philippine climate: Supranee Pink, Inner Light, Crimson Fire, Mangkala Ubol, and more.</p>
+      </div>
+      <div class="mt-8 grid grid-cols-3 gap-6">
+        <div><div class="text-3xl font-display font-semibold text-gradient-gold">40+</div><div class="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Varieties</div></div>
+        <div><div class="text-3xl font-display font-semibold text-gradient-gold">8 yrs</div><div class="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Growing</div></div>
+        <div><div class="text-3xl font-display font-semibold text-gradient-gold">PH</div><div class="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Nationwide Ship</div></div>
+      </div>
+    </div>
+
+    <div data-reveal class="relative overflow-hidden rounded-3xl border border-gold/30 shadow-bloom">
+      <img src="images/collection-5.jpg" alt="Replanting sale bundle" class="h-full w-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 bg-gradient-to-t from-pond-deep via-pond-deep/50 to-transparent"></div>
+      <div class="absolute inset-x-0 bottom-0 space-y-3 p-8 text-center">
+        <div class="inline-flex items-center gap-1.5 rounded-sm px-3 py-1 text-[11px] font-semibold uppercase tracking-wider shadow-md" style="background: var(--gradient-gold); color: var(--pond-deep)">Replanting Sale</div>
+        <h3 class="text-3xl font-display text-gradient-gold">Supranee Pink & Mangkala Ubol</h3>
+        <p class="text-sm text-muted-foreground">Two hardy hand-picked plants, one nursery bundle.</p>
+        <div class="inline-block rounded-md px-6 py-2 text-2xl font-display font-semibold text-white shadow-lg" style="background: linear-gradient(to right, var(--crimson), oklch(0.45 0.22 20))">₱1,399</div>
+        <p class="text-[11px] uppercase tracking-wider text-muted-foreground">*Sale price only</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="relative py-28">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mx-auto mb-14 max-w-2xl text-center">
+      <p class="mb-3 text-xs uppercase tracking-[0.4em] text-gold">Gallery</p>
+      <h2 class="text-4xl font-display sm:text-5xl">Blooms from the <span class="italic text-gradient-gold">Nursery</span></h2>
+    </div>
+    <div id="gallery-grid" class="grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-4"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative overflow-hidden py-28" style="background: linear-gradient(180deg, oklch(0.15 0.03 155) 0%, oklch(0.1 0.02 155) 100%)">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mx-auto mb-16 max-w-2xl text-center">
+      <p class="mb-3 text-xs uppercase tracking-[0.4em] text-gold">Get in Touch</p>
+      <h2 class="text-4xl font-display sm:text-5xl">Come <span class="italic text-gradient-gold">visit the pond</span></h2>
+    </div>
+
+    <div class="grid gap-10 lg:grid-cols-2">
+      <div data-reveal class="rounded-3xl border border-gold/20 p-8 shadow-bloom backdrop-blur" style="background: oklch(0.22 0.035 155 / 0.6)">
+        <ul class="space-y-6">
+          <li><a href="tel:+639615831341" class="block hover:opacity-90 transition-opacity"><div class="flex items-start gap-4">
+            <div class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-pond-deep shadow-md" style="background: var(--gradient-gold)"><i data-lucide="phone" class="h-5 w-5"></i></div>
+            <div class="min-w-0"><div class="text-[11px] uppercase tracking-[0.3em] text-muted-foreground">Phone</div><div class="mt-0.5 truncate text-base">+63 961 583 1341</div></div>
+          </div></a></li>
+          <li><a href="mailto:nymphaea.lilies@gmail.com" class="block hover:opacity-90 transition-opacity"><div class="flex items-start gap-4">
+            <div class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-pond-deep shadow-md" style="background: var(--gradient-gold)"><i data-lucide="mail" class="h-5 w-5"></i></div>
+            <div class="min-w-0"><div class="text-[11px] uppercase tracking-[0.3em] text-muted-foreground">Email</div><div class="mt-0.5 truncate text-base">nymphaea.lilies@gmail.com</div></div>
+          </div></a></li>
+          <li><div class="flex items-start gap-4">
+            <div class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-pond-deep shadow-md" style="background: var(--gradient-gold)"><i data-lucide="map-pin" class="h-5 w-5"></i></div>
+            <div class="min-w-0"><div class="text-[11px] uppercase tracking-[0.3em] text-muted-foreground">Location</div><div class="mt-0.5 text-base">Lawy, Capas, Tarlac, Philippines</div></div>
+          </div></li>
+        </ul>
+
+        <div class="mt-8 border-t border-border/40 pt-6">
+          <div class="mb-3 text-[11px] uppercase tracking-[0.3em] text-muted-foreground">Follow / Message</div>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://facebook.com/" aria-label="Facebook" class="grid h-11 w-11 place-items-center rounded-full border border-gold/40 text-gold transition-all hover:bg-gold hover:text-pond-deep hover:scale-110"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+            <a href="https://m.me/" aria-label="Messenger" class="grid h-11 w-11 place-items-center rounded-full border border-gold/40 text-gold transition-all hover:bg-gold hover:text-pond-deep hover:scale-110"><i data-lucide="message-circle" class="h-4 w-4"></i></a>
+            <a href="https://x.com/" aria-label="X" class="grid h-11 w-11 place-items-center rounded-full border border-gold/40 text-gold transition-all hover:bg-gold hover:text-pond-deep hover:scale-110"><i data-lucide="twitter" class="h-4 w-4"></i></a>
+            <a href="mailto:nymphaea.lilies@gmail.com" aria-label="Email" class="grid h-11 w-11 place-items-center rounded-full border border-gold/40 text-gold transition-all hover:bg-gold hover:text-pond-deep hover:scale-110"><i data-lucide="mail" class="h-4 w-4"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <form id="contact-form" data-reveal class="rounded-3xl border border-gold/20 p-8 shadow-bloom backdrop-blur" style="background: oklch(0.22 0.035 155 / 0.6)">
+        <div class="space-y-5">
+          <div>
+            <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">Name</label>
+            <input required maxlength="100" class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none transition-colors focus:border-gold" />
+          </div>
+          <div>
+            <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">Email</label>
+            <input required type="email" maxlength="255" class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none transition-colors focus:border-gold" />
+          </div>
+          <div>
+            <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">Message</label>
+            <textarea required maxlength="1000" rows="5" class="w-full resize-none rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none transition-colors focus:border-gold"></textarea>
+          </div>
+          <button id="submit-btn" type="submit" class="group inline-flex w-full items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-pond-deep shadow-glow transition-transform hover:scale-[1.02]" style="background: var(--gradient-gold)">
+            <span id="submit-text">Send Message</span> <i data-lucide="send" class="h-4 w-4"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gold/10 py-12" style="background: oklch(0.09 0.02 155)">
+  <div class="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 sm:flex-row sm:justify-between">
+    <div class="flex items-center gap-3">
+      <img src="images/lotus-logo.png" alt="" class="h-9 w-9" />
+      <span class="font-display tracking-[0.3em] text-gradient-gold">NYMPHAEA</span>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-6 text-xs uppercase tracking-wider text-muted-foreground">
+      <a href="#top" class="hover:text-gold transition-colors">Home</a>
+      <a href="#varieties" class="hover:text-gold transition-colors">Varieties</a>
+      <a href="#gallery" class="hover:text-gold transition-colors">Gallery</a>
+      <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+    </div>
+    <div class="flex gap-2">
+      <a href="#contact" class="grid h-9 w-9 place-items-center rounded-full border border-gold/30 text-gold/80 transition-colors hover:bg-gold hover:text-pond-deep"><i data-lucide="facebook" class="h-3.5 w-3.5"></i></a>
+      <a href="#contact" class="grid h-9 w-9 place-items-center rounded-full border border-gold/30 text-gold/80 transition-colors hover:bg-gold hover:text-pond-deep"><i data-lucide="message-circle" class="h-3.5 w-3.5"></i></a>
+      <a href="#contact" class="grid h-9 w-9 place-items-center rounded-full border border-gold/30 text-gold/80 transition-colors hover:bg-gold hover:text-pond-deep"><i data-lucide="twitter" class="h-3.5 w-3.5"></i></a>
+      <a href="#contact" class="grid h-9 w-9 place-items-center rounded-full border border-gold/30 text-gold/80 transition-colors hover:bg-gold hover:text-pond-deep"><i data-lucide="mail" class="h-3.5 w-3.5"></i></a>
+    </div>
+  </div>
+  <p class="mt-8 text-center text-xs text-muted-foreground">© <span id="year"></span> Nymphaea Waterlilies & Pond Plants · Lawy, Capas, Tarlac</p>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-50 hidden place-items-center p-6 backdrop-blur-md" style="background: oklch(0.13 0.03 155 / 0.95)">
+  <button id="lightbox-close" aria-label="Close" class="absolute right-6 top-6 grid h-10 w-10 place-items-center rounded-full border border-gold/40 text-gold"><i data-lucide="x" class="h-5 w-5"></i></button>
+  <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[92vw] rounded-2xl border border-gold/30 shadow-bloom" />
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+  const varieties = [
+    { name:"Supranee Pink", tag:"Hardy Day Blooming", price:"₱2,199", img:"images/collection-5.jpg", accent:"oklch(0.65 0.28 350)", free:true },
+    { name:"Crimson Fire", tag:"Hardy Day Blooming", price:"₱3,899", img:"images/collection-3.jpg", accent:"oklch(0.55 0.24 20)", free:true },
+    { name:"Inner Light", tag:"Hardy Day Blooming", price:"₱2,499", img:"images/collection-4.jpg", accent:"oklch(0.82 0.16 88)", free:true },
+    { name:"Royal Violet", tag:"Tropical Day Blooming", price:"₱2,899", img:"images/collection-2.jpg", accent:"oklch(0.5 0.25 300)", free:true },
+    { name:"Blush Peony", tag:"Hardy Double Bloom", price:"₱2,699", img:"images/collection-6.jpg", accent:"oklch(0.9 0.06 20)", free:true },
+    { name:"Ruby Sunrise", tag:"Hardy Day Blooming", price:"₱2,999", img:"images/collection-7.jpg", accent:"oklch(0.55 0.24 20)", free:true },
+    { name:"Sunlight", tag:"Hardy Day Blooming", price:"₱1,899", img:"images/colllection-8.jpg", accent:"oklch(0.82 0.16 88)", free:true },
+    { name:"Supranee & Mangkala", tag:"Replanting Sale — 2 Plants", price:"₱1,399", img:"images/collection-5.jpg", accent:"oklch(0.75 0.18 55)", sale:true },
+  ];
+  const grid = document.getElementById('variety-grid');
+  varieties.forEach((v,i) => {
+    const el = document.createElement('article');
+    el.setAttribute('data-reveal','');
+    el.className = 'ripple overflow-hidden rounded-2xl border border-border bg-card shadow-bloom group';
+    el.style.setProperty('--accent', v.accent);
+    el.style.animationDelay = (i*60)+'ms';
+    el.innerHTML = `
+      <div class="relative aspect-square overflow-hidden">
+        <img src="${v.img}" alt="${v.name}" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-pond-deep/80 via-transparent to-transparent"></div>
+        ${v.sale ? `<div class="absolute left-3 top-3"><div class="inline-flex items-center gap-1.5 rounded-sm px-3 py-1 text-[11px] font-semibold uppercase tracking-wider shadow-md text-pond-deep" style="background: var(--gradient-gold)">Replanting Sale</div></div>` : ''}
+      </div>
+      <div class="space-y-3 p-5">
+        <div>
+          <h3 class="text-xl font-display font-semibold">${v.name}</h3>
+          <p class="text-xs uppercase tracking-wider text-muted-foreground">${v.tag}</p>
+        </div>
+        <div class="flex items-center justify-between pt-2">
+          <span class="text-2xl font-display font-semibold text-gradient-gold">${v.price}</span>
+          ${v.free ? `<div class="inline-flex items-center gap-1.5 rounded-sm px-3 py-1 text-[11px] font-semibold uppercase tracking-wider shadow-md text-white" style="background: linear-gradient(to right, var(--crimson), oklch(0.45 0.22 20))">Free Shipping</div>` : ''}
+        </div>
+      </div>`;
+    grid.appendChild(el);
+  });
+
+  const galleryImgs = [
+    { src:"images/gallery-1.jpg", alt:"Twin pink water lilies", span:"row-span-2" },
+    { src:"images/gallery-3.jpg", alt:"Crimson and gold speckled lily", span:"" },
+    { src:"images/collection-2.jpg", alt:"Deep purple water lily", span:"" },
+    { src:"images/gallery-4.jpg", alt:"Supranee Pink bloom", span:"row-span-2" },
+    { src:"images/colllection-8.jpg", alt:"Yellow water lily on pads", span:"" },
+    { src:"images/collection-6.jpg", alt:"White blush peony lily", span:"" },
+    { src:"images/collection-4.jpg", alt:"Inner Light yellow bloom", span:"" },
+    { src:"images/collection-3.jpg", alt:"Crimson Fire variegated lily", span:"" },
+  ];
+  const gg = document.getElementById('gallery-grid');
+  galleryImgs.forEach((g,i) => {
+    const b = document.createElement('button');
+    b.setAttribute('data-reveal','');
+    b.className = `group relative overflow-hidden rounded-xl border border-border ${g.span}`;
+    b.style.animationDelay = (i*50)+'ms';
+    b.innerHTML = `
+      <img src="${g.src}" alt="${g.alt}" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-gradient-to-t from-pond-deep/70 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>`;
+    b.addEventListener('click', () => openLightbox(g.src));
+    gg.appendChild(b);
+  });
+
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  function openLightbox(src){ lbImg.src = src; lb.style.display = 'grid'; lb.classList.add('fade-up'); }
+  function closeLightbox(){ lb.style.display = 'none'; }
+  lb.addEventListener('click', closeLightbox);
+  document.getElementById('lightbox-close').addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
+
+  // Form
+  document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const t = document.getElementById('submit-text');
+    t.textContent = 'Message Sent — Salamat!';
+    e.target.reset();
+    setTimeout(() => { t.textContent = 'Send Message'; }, 4000);
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reveal animations
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('fade-up'); en.target.style.opacity=''; en.target.style.transform=''; io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  lucide.createIcons();
+</script>
+</body>
+</html>
