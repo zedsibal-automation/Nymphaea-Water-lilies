@@ -246,9 +246,117 @@
             <input required maxlength="100" class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none transition-colors focus:border-gold" />
           </div>
           <div>
-            <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">Email</label>
-            <input required type="email" maxlength="255" class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none transition-colors focus:border-gold" />
+            <div class="grid gap-5 md:grid-cols-2">
+
+  <div>
+    <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+      First Name
+    </label>
+
+    <input
+      name="first_name"
+      required
+      maxlength="100"
+      class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none focus:border-gold">
+  </div>
+
+  <div>
+    <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+      Last Name
+    </label>
+
+    <input
+      name="last_name"
+      required
+      maxlength="100"
+      class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none focus:border-gold">
+  </div>
+
+</div>
           </div>
+          <div>
+  <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+    Phone Number
+  </label>
+
+  <input
+    type="tel"
+    name="phone"
+    required
+    placeholder="+63 9XX XXX XXXX"
+    class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none focus:border-gold">
+</div>
+          <div>
+  <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+    Business Name (Optional)
+  </label>
+
+  <input
+    name="business_name"
+    placeholder="Your business or organization"
+    class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none focus:border-gold">
+</div>
+          <div>
+  <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+    Budget
+  </label>
+
+  <input
+    name="budget"
+    placeholder="Example: ₱5,000"
+    class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none focus:border-gold">
+</div>
+          <div>
+
+<label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+Preferred Water Lily Color
+</label>
+
+<select
+name="preferred_color"
+class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3">
+
+<option value="">Select Color</option>
+
+<option>Blue</option>
+
+<option>Pink</option>
+
+<option>White</option>
+
+<option>Purple</option>
+
+<option>Yellow</option>
+
+<option>Red</option>
+
+</select>
+
+</div>
+          <div>
+
+<label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+Pond Size
+</label>
+
+<input
+name="pond_size"
+placeholder="Example: 3m × 4m"
+class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3">
+
+</div>
+          <div>
+
+<label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+Delivery Province
+</label>
+
+<input
+name="delivery_province"
+placeholder="Example: Tarlac"
+class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3">
+
+</div>
           <div>
             <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">Message</label>
             <textarea required maxlength="1000" rows="5" class="w-full resize-none rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none transition-colors focus:border-gold"></textarea>
