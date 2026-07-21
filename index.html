@@ -502,6 +502,18 @@ style="background: var(--gradient-gold)">
   <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[92vw] rounded-2xl border border-gold/30 shadow-bloom" />
 </div>
 
+<!-- Thank You Modal -->
+<div id="thank-you-modal" class="fixed inset-0 z-50 hidden place-items-center p-6 backdrop-blur-md" style="background: oklch(0.13 0.03 155 / 0.95)">
+  <div class="relative w-full max-w-md rounded-3xl border border-gold/20 p-8 text-center shadow-bloom" style="background: oklch(0.15 0.03 155)">
+    <button id="thank-you-close" aria-label="Close" class="absolute right-5 top-5 grid h-9 w-9 place-items-center rounded-full border border-gold/40 text-gold"><i data-lucide="x" class="h-4 w-4"></i></button>
+    <img src="images/lotus-logo.png" alt="" class="mx-auto h-14 w-14" style="filter: drop-shadow(0 4px 20px oklch(0.82 0.16 88 / 0.4))" />
+    <h3 class="mt-4 font-display text-2xl font-medium text-gradient-gold">Salamat po!</h3>
+    <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+      Thank you for your inquiry! We've received your details and will get back to you within 24 hours to talk about your water lilies.
+    </p>
+  </div>
+</div>
+
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script>
   const varieties = [
@@ -571,6 +583,11 @@ style="background: var(--gradient-gold)">
   lb.addEventListener('click', closeLightbox);
   document.getElementById('lightbox-close').addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
 
+  // Thank You Modal
+  const tyModal = document.getElementById('thank-you-modal');
+  document.getElementById('thank-you-close').addEventListener('click', () => { tyModal.style.display = 'none'; });
+  tyModal.addEventListener('click', (e) => { if (e.target === tyModal) tyModal.style.display = 'none'; });
+
   // Form
   document.getElementById('contact-form').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -604,6 +621,7 @@ style="background: var(--gradient-gold)">
       if (res.ok) {
         t.textContent = 'Message Sent — Salamat!';
         form.reset();
+        document.getElementById('thank-you-modal').style.display = 'grid';
       } else {
         t.textContent = 'Something went wrong — try again';
       }
