@@ -115,7 +115,7 @@
   <div class="absolute inset-0 bg-gradient-hero"></div>
   <div class="absolute inset-0" style="background: radial-gradient(ellipse at center, transparent 20%, oklch(0.13 0.03 155 / 0.85) 80%)"></div>
 
-  <div class="relative z-10 mx-auto max-w-4xl px-6 pt-24 pb-16 text-center">
+  <div class="relative z-10 mx-auto max-w-4xl px-6 pt-24 pb-40 text-center sm:pb-24">
     <div data-reveal class="flex justify-center">
       <div class="flex flex-col items-center gap-1">
         <img src="images/lotus-logo.png" alt="" class="h-20 w-20" style="filter: drop-shadow(0 4px 20px oklch(0.82 0.16 88 / 0.4))" />
@@ -346,7 +346,7 @@ class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-for
 <!-- Business -->
 <div>
 <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-Business Name
+Business Name (Optional)
 </label>
 <input
 name="business_name"
@@ -357,7 +357,7 @@ class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-for
 <!-- Budget -->
 <div>
 <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-Budget
+Budget(Optional)
 </label>
 
 <select
@@ -376,7 +376,7 @@ class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-for
 <!-- Preferred Color -->
 <div>
 <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-Preferred Water Lily Color
+Preferred Water Lily Color(Optional)
 </label>
 
 <select
@@ -398,7 +398,7 @@ class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3">
 <!-- Pond Size -->
 <div>
 <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-Pond Size
+Pond Size(Optional)
 </label>
 <select
 name="pond_size"
@@ -415,7 +415,7 @@ class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3">
 <!-- Province -->
 <div>
 <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-Delivery Province
+Delivery Province(Optional)
 </label>
 
 <input
@@ -549,9 +549,6 @@ style="background: var(--gradient-gold)">
     { src:"images/collection-6.jpg", alt:"White blush peony lily", span:"" },
     { src:"images/collection-4.jpg", alt:"Inner Light yellow bloom", span:"" },
     { src:"images/collection-3.jpg", alt:"Crimson Fire variegated lily", span:"" },
-    { src:"images/collection-9.jpg", alt:"Inner Light yellow bloom", span:"" },
-    { src:"images/collection-10.jpg", alt:"Crimson Fire variegated lily", span:"" },
-
   ];
   const gg = document.getElementById('gallery-grid');
   galleryImgs.forEach((g,i) => {
