@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" />
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/css/intlTelInput.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -332,15 +332,11 @@ class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-for
 
 <!-- Phone -->
 <div>
-<label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-Phone Number
-</label>
-<input
-type="tel"
-name="phone"
-required
-placeholder="+63 9XX XXX XXXX"
-class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none focus:border-gold">
+  <label class="mb-2 block text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+    Phone Number
+  </label>
+  <input type="tel" id="phone" name="phone" required
+    class="w-full rounded-lg border border-border bg-pond-deep/50 px-4 py-3 text-foreground outline-none focus:border-gold">
 </div>
 
 <!-- Business -->
@@ -646,6 +642,15 @@ style="background: var(--gradient-gold)">
   document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
 
   lucide.createIcons();
+</script>
+      <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/js/intlTelInput.min.js"></script>
+<script>
+  const phoneInput = document.querySelector("#phone");
+  const iti = window.intlTelInput(phoneInput, {
+    initialCountry: "ph",              // defaults to Philippines since that's your market
+    preferredCountries: ["ph", "us", "au", "sg"],
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/js/utils.js"
+  });
 </script>
 </body>
 </html>
